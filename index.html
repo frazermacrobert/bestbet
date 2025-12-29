@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Betting on Frazer MacRobert | Dabble P&C Advisor</title>
+    <meta name="description" content="Place your bet: Is Frazer MacRobert the right fit for Dabble's P&C Advisor role? Explore the odds and see why this bet pays off.">
+    <meta property="og:title" content="Betting on Frazer MacRobert | Dabble P&C Advisor">
+    <meta property="og:description" content="Interactive betting slip showing why Frazer is a winning bet for your team">
+    <meta property="og:type" content="website">
+    
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        
+        <!-- BETTING SLIP HEADER -->
+        <div class="betting-slip-header">
+            <div class="slip-left">
+                <div class="slip-label">BETTING SLIP</div>
+                <div class="candidate-name">Frazer MacRobert</div>
+                <div class="role-title">People & Culture Advisor</div>
+                <div class="odds-total" id="odds-total">Overall Odds: <span class="odds-value">—</span></div>
+            </div>
+            <div class="slip-right">
+                <div class="stake-info">
+                    <div class="stake-label">Your Stake</div>
+                    <div class="stake-value">1 Job Offer</div>
+                </div>
+                <div class="potential-returns">
+                    <div class="returns-label">Potential Returns</div>
+                    <div class="returns-value">High-Performing P&C Advisor</div>
+                </div>
+                <button class="place-bet-btn" id="place-bet-btn" disabled>
+                    <span class="btn-text">Place Bet</span>
+                    <span class="btn-subtext">Explore odds first</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- BETTING STATS -->
+        <div class="betting-stats">
+            <div class="stat-card">
+                <div class="stat-icon">🎲</div>
+                <div class="stat-value" id="bets-placed">0/8</div>
+                <div class="stat-label">Odds Checked</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🏆</div>
+                <div class="stat-value" id="win-rate">—</div>
+                <div class="stat-label">Win Rate</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">⚡</div>
+                <div class="stat-value" id="confidence">—</div>
+                <div class="stat-label">Confidence Level</div>
+            </div>
+        </div>
+
+        <!-- INSTRUCTIONS -->
+        <div class="instructions">
+            <strong>🎰 How this works:</strong> Each requirement is a bet. Click to see the odds based on Frazer's track record. Check all 8 bets to unlock the "Place Bet" button and see your total returns.
+        </div>
+
+        <!-- BETTING MARKETS (Requirements) -->
+        <div class="section-header">
+            <h2>📊 Available Markets</h2>
+            <p>Click any market to see odds, evidence, and potential payout</p>
+        </div>
+
+        <div class="markets-grid" id="markets-grid"></div>
+
+        <!-- BET DETAILS PANEL -->
+        <div class="bet-details" id="bet-details" style="display: none;">
+            <div class="bet-details-header">
+                <div class="detail-title-section">
+                    <div class="detail-icon" id="detail-icon">💡</div>
+                    <div>
+                        <div class="detail-subtitle">BET DETAILS</div>
+                        <div class="detail-title" id="detail-title">—</div>
+                    </div>
+                </div>
+                <button class="close-details" id="close-details">✕</button>
+            </div>
+            
+            <div class="bet-details-body">
+                <div class="odds-display">
+                    <div class="odds-label">Odds of Success</div>
+                    <div class="odds-big" id="odds-big">—</div>
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" id="confidence-fill"></div>
+                    </div>
+                </div>
+
+                <div class="evidence-section">
+                    <div class="evidence-header">📋 Evidence</div>
+                    <div class="evidence-text" id="evidence-text">—</div>
+                </div>
+
+                <div class="track-record-section">
+                    <div class="track-record-header">🏆 Track Record</div>
+                    <div class="track-record-text" id="track-record-text">—</div>
+                </div>
+
+                <div class="matching-experience">
+                    <div class="matching-header">✓ Matching Experience</div>
+                    <div class="matching-tags" id="matching-tags"></div>
+                </div>
+
+                <button class="confirm-bet-btn" id="confirm-bet-btn">
+                    ✓ Add to Betting Slip
+                </button>
+            </div>
+        </div>
+
+        <!-- WINNING MODAL -->
+        <div class="winning-modal" id="winning-modal">
+            <div class="modal-content">
+                <div class="confetti-container" id="confetti-container"></div>
+                <div class="trophy-icon">🏆</div>
+                <h2 class="modal-title">Winning Bet Confirmed!</h2>
+                <div class="modal-odds">8/8 Markets Checked</div>
+                <div class="modal-message">
+                    Based on comprehensive analysis of all requirements, <strong>Frazer MacRobert</strong> represents a high-probability bet for Dabble's P&C Advisor role.
+                </div>
+                <div class="payout-box">
+                    <div class="payout-label">Expected Payout</div>
+                    <div class="payout-items">
+                        <div class="payout-item">✓ Award-winning culture frameworks</div>
+                        <div class="payout-item">✓ 10+ years senior-level experience</div>
+                        <div class="payout-item">✓ Behavioural science expertise</div>
+                        <div class="payout-item">✓ Fortune 500 client portfolio</div>
+                        <div class="payout-item">✓ Global collaboration experience</div>
+                        <div class="payout-item">✓ Tech-fluent & innovative mindset</div>
+                    </div>
+                </div>
+                <div class="modal-cta">
+                    <a href="mailto:frazer@clanutd.com" class="contact-btn">📧 Cash Out: Get In Touch</a>
+                    <div class="contact-secondary">
+                        <a href="https://www.frazermacrobert.com" target="_blank">🌐 Portfolio</a>
+                        <a href="https://www.linkedin.com/in/frazermacrobert" target="_blank">💼 LinkedIn</a>
+                    </div>
+                </div>
+                <button class="close-modal" id="close-modal">✕</button>
+            </div>
+        </div>
+
+        <!-- EXPERIENCE PROOF (Hidden until bet details opened) -->
+        <div class="experience-grid" id="experience-grid" style="display: none;"></div>
+
+    </div>
+
+    <script>
+        // ===== DATA STRUCTURE =====
+        const bettingMarkets = [
+            {
+                id: "people-advisory",
+                title: "People Advisory",
+                description: "Trusted advisor on performance, development, conflict resolution, wellbeing",
+                icon: "🎯",
+                odds: "96%",
+                oddsDecimal: "1.04",
+                confidence: 96,
+                evidence: "10+ years advising senior leaders at Fortune 500 companies on people strategy, culture transformation, and behavioural change. Specialist in creating frameworks that drive measurable outcomes.",
+                trackRecord: "Delivered projects with 139% improvement in employee engagement scores and 68% reduction in change resistance across multiple organisations.",
+                tags: ["advisory", "leadership", "wellbeing", "strategy"]
+            },
+            {
+                id: "culture-champion",
+                title: "Culture Champion",
+                description: "Own cultural initiatives, manage UK cultural calendar, embody core values",
+                icon: "🏆",
+                odds: "98%",
+                oddsDecimal: "1.02",
+                confidence: 98,
+                evidence: "Built award-winning safety cultures and internal comms programmes across multiple organizations. Published author of 'Fan Centric Design'—literally wrote the book on culture building.",
+                trackRecord: "Created frameworks adopted by 12+ Fortune 500 companies; published book available on Amazon with 4.8★ rating. Proven ability to embed values at scale.",
+                tags: ["culture", "events", "community", "values"]
+            },
+            {
+                id: "global-collaboration",
+                title: "Global Collaboration",
+                description: "Partner with Global P&C teams on high-performance solutions & talent management",
+                icon: "🌍",
+                odds: "94%",
+                oddsDecimal: "1.06",
+                confidence: 94,
+                evidence: "Collaborated with international teams at UNICEF, GIZ, Shell, and others across 4 continents. Fluent in aligning regional initiatives with global strategy while respecting local context.",
+                trackRecord: "Managed cross-functional teams across 15+ countries; secured multiple six-figure contracts through collaborative proposals. Natural at bridging cultural and operational differences.",
+                tags: ["collaboration", "talent", "global", "onboarding"]
+            },
+            {
+                id: "hr-operations",
+                title: "HR Operations & Compliance",
+                description: "UK legal compliance, employment documentation, payroll & benefits admin",
+                icon: "📋",
+                odds: "92%",
+                oddsDecimal: "1.09",
+                confidence: 92,
+                evidence: "Managed end-to-end HR operations for own 25-30 person business including contracts, compliance, and payroll. Understands what precision in documentation means when stakes are high.",
+                trackRecord: "Successfully managed HR for 25-30 staff across 2 cities with zero compliance issues over 4+ years. Deep operational knowledge from real-world business ownership.",
+                tags: ["compliance", "operations", "documentation", "payroll"]
+            },
+            {
+                id: "behaviour-change",
+                title: "Behaviour Change Expertise",
+                description: "Drive adoption of new practices & cultural shifts through evidence-based approaches",
+                icon: "🧠",
+                odds: "97%",
+                oddsDecimal: "1.03",
+                confidence: 97,
+                evidence: "NanoMBA in Behavioural Science (2024). Specialist in cybersecurity and safety behaviour change projects at ScarlettAbbott—leveraging evidence-based frameworks to shift organizational behaviour at scale.",
+                trackRecord: "Led AI adoption programmes and cybersecurity behaviour change for 8+ major enterprises in 2024. Proven methodology for making change stick, not just launching it.",
+                tags: ["behaviour-change", "innovation", "strategy"]
+            },
+            {
+                id: "comms-strategy",
+                title: "Internal Comms & Strategy",
+                description: "Shape messaging & engagement strategies that resonate across diverse teams",
+                icon: "📢",
+                odds: "95%",
+                oddsDecimal: "1.05",
+                confidence: 95,
+                evidence: "10+ years leading internal comms at senior level. Built comms frameworks that cut through noise for Fortune 500 companies—knows how to make messages land with diverse audiences.",
+                trackRecord: "Campaigns reached 100,000+ employees across Pernod Ricard, Coca Cola, British Gas, Anglo American. Master at making complex ideas accessible and compelling.",
+                tags: ["communications", "strategy", "engagement", "messaging"]
+            },
+            {
+                id: "autonomous-execution",
+                title: "Autonomous Execution",
+                description: "Work independently, manage priorities in fast-paced environment, handle confidential info",
+                icon: "⚡",
+                odds: "99%",
+                oddsDecimal: "1.01",
+                confidence: 99,
+                evidence: "Ran own business managing 25-30 staff across 2 cities. Agency background means juggling competing priorities under tight deadlines is second nature. Integrity is non-negotiable.",
+                trackRecord: "Managed $9M+ turnover operation; handled sensitive executive-level communications for Fortune 500 clients. Self-starter who thrives on autonomy and accountability.",
+                tags: ["autonomy", "integrity", "fast-paced", "confidentiality"]
+            },
+            {
+                id: "tools-tech",
+                title: "Tech Proficiency",
+                description: "MS Office Suite, Slack, Rippling, Trello, Figma experience",
+                icon: "💻",
+                odds: "100%",
+                oddsDecimal: "1.00",
+                confidence: 100,
+                evidence: "Daily user of Slack, Trello, Asana, Notion, Figma, Miro. AI-integrated workflows across Adobe Creative Suite, WordPress, analytics platforms. Tech-fluent and adaptable to new tools.",
+                trackRecord: "Built this interactive betting experience from scratch using HTML/CSS/JS—demonstrating technical capability well beyond basic tool usage. Comfortable in code or Canva.",
+                tags: ["tools", "technology", "software", "collaboration"]
+            }
+        ];
+
+        const experienceData = [
+            {
+                id: "scarlettabbott",
+                role: "IC Consultant",
+                org: "ScarlettAbbott",
+                period: "Dec 2023 - Present",
+                highlights: [
+                    "Specialist in cybersecurity & physical safety behaviour change projects",
+                    "Lead AI adoption, optimization & change programmes",
+                    "Clients: Pernod Ricard, Harbour Energy, Johnson Matthey, Currys, British Gas, Coca Cola, Anglo American"
+                ],
+                tags: ["advisory", "behaviour-change", "strategy", "global", "innovation", "engagement"]
+            },
+            {
+                id: "wabt",
+                role: "People Strategy & Change Associate",
+                org: "We Are Brass Tacks",
+                period: "Oct 2022 - Oct 2023",
+                highlights: [
+                    "Built award-winning safety frameworks and internal comms for Fortune 500 companies",
+                    "Used behavioural science methodologies to construct resonant messaging",
+                    "Clients: Shell Bitumen, DCC Group, CERTAS Energy, SGN, BIFFA"
+                ],
+                tags: ["culture", "behaviour-change", "communications", "strategy", "wellbeing", "compliance"]
+            },
+            {
+                id: "education",
+                role: "Behavioural Science Specialist",
+                org: "NanoMBA + Certifications",
+                period: "2022-2024",
+                highlights: [
+                    "Completed NanoMBA in Behavioural Science (2024)",
+                    "Published author: 'Fan Centric Design'",
+                    "Certifications in HCD, Behavioural Economics, Strategic Marketing"
+                ],
+                tags: ["behaviour-change", "innovation", "strategy", "culture", "advisory"]
+            },
+            {
+                id: "neverland",
+                role: "Managing Director",
+                org: "Neverland (Own Venture)",
+                period: "May 2013 - Dec 2017",
+                highlights: [
+                    "Led team of 25-30 across two cities managing all business operations",
+                    "Managed HR, finance, events, marketing, and day-to-day operations",
+                    "Zero compliance issues over 4+ years, $9M+ turnover"
+                ],
+                tags: ["operations", "autonomy", "integrity", "confidentiality", "compliance", "payroll", "documentation", "leadership"]
+            }
+        ];
+
+        // ===== STATE =====
+        let checkedBets = new Set();
+        let currentBet = null;
+
+        // ===== RENDER MARKETS =====
+        function renderMarkets() {
+            const grid = document.getElementById('markets-grid');
+            bettingMarkets.forEach(market => {
+                const card = document.createElement('div');
+                card.className = 'market-card';
+                card.dataset.id = market.id;
+                card.innerHTML = `
+                    <div class="market-icon">${market.icon}</div>
+                    <div class="market-content">
+                        <div class="market-title">${market.title}</div>
+                        <div class="market-desc">${market.description}</div>
+                        <div class="market-odds">
+                            <span class="odds-label">Odds:</span>
+                            <span class="odds-value">${market.odds}</span>
+                        </div>
+                    </div>
+                    <div class="market-status">
+                        <span class="status-unchecked">Check Odds</span>
+                        <span class="status-checked">✓ Added</span>
+                    </div>
+                `;
+                card.addEventListener('click', () => openBetDetails(market));
+                grid.appendChild(card);
+            });
+        }
+
+        // ===== OPEN BET DETAILS =====
+        function openBetDetails(market) {
+            currentBet = market;
+            
+            document.getElementById('detail-icon').textContent = market.icon;
+            document.getElementById('detail-title').textContent = market.title;
+            document.getElementById('odds-big').textContent = market.odds;
+            document.getElementById('confidence-fill').style.width = market.confidence + '%';
+            document.getElementById('evidence-text').textContent = market.evidence;
+            document.getElementById('track-record-text').textContent = market.trackRecord;
+            
+            // Render matching tags
+            const tagsHtml = market.tags.map(tag => `<span class="exp-tag">${tag}</span>`).join('');
+            document.getElementById('matching-tags').innerHTML = tagsHtml;
+            
+            document.getElementById('bet-details').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        // ===== CLOSE BET DETAILS =====
+        function closeBetDetails() {
+            document.getElementById('bet-details').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // ===== CONFIRM BET =====
+        function confirmBet() {
+            if (!currentBet) return;
+            
+            checkedBets.add(currentBet.id);
+            
+            // Update market card
+            const card = document.querySelector(`.market-card[data-id="${currentBet.id}"]`);
+            if (card) {
+                card.classList.add('checked');
+            }
+            
+            updateStats();
+            closeBetDetails();
+            
+            // Check if all bets placed
+            if (checkedBets.size === bettingMarkets.length) {
+                enablePlaceBet();
+            }
+        }
+
+        // ===== UPDATE STATS =====
+        function updateStats() {
+            const total = bettingMarkets.length;
+            const checked = checkedBets.size;
+            const percentage = Math.round((checked / total) * 100);
+            
+            document.getElementById('bets-placed').textContent = `${checked}/${total}`;
+            document.getElementById('win-rate').textContent = checked > 0 ? `${percentage}%` : '—';
+            document.getElementById('confidence').textContent = checked > 0 ? 'High' : '—';
+            
+            // Update overall odds
+            if (checked > 0) {
+                const avgOdds = Math.round(
+                    Array.from(checkedBets).reduce((sum, id) => {
+                        const market = bettingMarkets.find(m => m.id === id);
+                        return sum + market.confidence;
+                    }, 0) / checked
+                );
+                document.querySelector('#odds-total .odds-value').textContent = `${avgOdds}%`;
+            }
+        }
+
+        // ===== ENABLE PLACE BET =====
+        function enablePlaceBet() {
+            const btn = document.getElementById('place-bet-btn');
+            btn.disabled = false;
+            btn.querySelector('.btn-text').textContent = '🎰 Place Bet';
+            btn.querySelector('.btn-subtext').textContent = 'All odds checked';
+            btn.classList.add('enabled');
+        }
+
+        // ===== PLACE BET (SHOW WINNING MODAL) =====
+        function placeBet() {
+            if (checkedBets.size !== bettingMarkets.length) return;
+            
+            document.getElementById('winning-modal').classList.add('show');
+            document.body.style.overflow = 'hidden';
+            
+            // Trigger confetti
+            createConfetti();
+        }
+
+        // ===== CONFETTI =====
+        function createConfetti() {
+            const container = document.getElementById('confetti-container');
+            container.innerHTML = '';
+            
+            const colors = ['#F59E0B', '#FCD34D', '#6B46C1', '#9F7AEA', '#10B981'];
+            
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + '%';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.animationDelay = Math.random() * 3 + 's';
+                confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                container.appendChild(confetti);
+            }
+        }
+
+        // ===== CLOSE MODAL =====
+        function closeModal() {
+            document.getElementById('winning-modal').classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+
+        // ===== EVENT LISTENERS =====
+        document.addEventListener('DOMContentLoaded', () => {
+            renderMarkets();
+            
+            document.getElementById('close-details').addEventListener('click', closeBetDetails);
+            document.getElementById('confirm-bet-btn').addEventListener('click', confirmBet);
+            document.getElementById('place-bet-btn').addEventListener('click', placeBet);
+            document.getElementById('close-modal').addEventListener('click', closeModal);
+            
+            // Close modal on backdrop click
+            document.getElementById('winning-modal').addEventListener('click', (e) => {
+                if (e.target.id === 'winning-modal') closeModal();
+            });
+        });
+    </script>
+</body>
+</html>
